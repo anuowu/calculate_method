@@ -38,6 +38,7 @@ module elect_primary
     A = Au(:,1:n)
     b = Au(:,n+1) 
     call up_tri_equ(A, b, n, X)
-
+    
   end subroutine
+
 end module

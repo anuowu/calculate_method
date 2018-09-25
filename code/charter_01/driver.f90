@@ -15,8 +15,13 @@ program  main
   !b = (50 49 53 12)
   !write(*,*) A(2,:)
   !write(*,*) b
+    
   call elec_prim(A, b, n, X)
   !call down_tri_equ(A, B,n, X)
+  do i = 1,N
+    write(*,*) A(i,:)
+  end do
+  write(*,*) b
   write(*,*) X
 
 end program  main
