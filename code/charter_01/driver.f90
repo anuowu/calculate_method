@@ -1,7 +1,7 @@
 program  main
-  use gaussian_elimination
+  use elect_primary
   implicit none
-  integer, parameter::n=4
+  integer, parameter::n=6
   integer i
   real A(n,n), X(n), b(n)
   
@@ -15,7 +15,7 @@ program  main
   !b = (50 49 53 12)
   !write(*,*) A(2,:)
   !write(*,*) b
-  call gaus_elim(A, b, n, X)
+  call elec_prim(A, b, n, X)
   !call down_tri_equ(A, B,n, X)
   write(*,*) X
 
