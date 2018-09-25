@@ -2,7 +2,7 @@
 module gaussian_elimination
   contains
   subroutine gaus_elim(A, b, n, X)
-    USE module triangle_equation
+    use triangle_equation
     implicit none 
     integer n, i, j
     real A(n,n), b(n), X(n), Au(n, n+1)
