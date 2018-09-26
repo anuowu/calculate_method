@@ -1,9 +1,10 @@
 program  main
-  use elect_primary
+  use court_split
   implicit none
-  integer, parameter::n=6
+  integer, parameter::n=4
   integer i
   real A(n,n), X(n), b(n)
+  real L(n,n), U(n,n)
   
   open(23, file='parameter.dat')
   read(23,*)
@@ -16,12 +17,8 @@ program  main
   !write(*,*) A(2,:)
   !write(*,*) b
     
-  call elec_prim(A, b, n, X)
+  call cour_spli(A, n, L, U)
   !call down_tri_equ(A, B,n, X)
-  do i = 1,N
-    write(*,*) A(i,:)
-  end do
-  write(*,*) b
   write(*,*) X
 
 end program  main
