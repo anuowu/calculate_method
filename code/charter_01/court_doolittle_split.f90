@@ -44,8 +44,8 @@ end subroutine
 subroutine dool_spli(A, n, L, U)
   implicit none
   integer n,i,k,j
-  real*8 A(n,n), L(n,n), U(n,n)
-  real*8 sum
+  real A(n,n), L(n,n), U(n,n)
+  real sum
 
   L(:,:) = 0.0
   U(:,:) = 0.0
