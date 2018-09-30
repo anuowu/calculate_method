@@ -1,7 +1,7 @@
 program  main
   use court_doolittle_split
   implicit none
-  integer, parameter::n=3
+  integer, parameter::n=4
   integer i
   real A(n,n), X(n), b(n)
   real L(n,n), U(n,n)
@@ -17,7 +17,7 @@ program  main
   !write(*,*) A(2,:)
   !write(*,*) b
     
-  call dool_spli(A, n, L, U)
+  call lu_spli(A, b, n, X)
   !call down_tri_equ(A, B,n, X)
   write(*,*) X
 

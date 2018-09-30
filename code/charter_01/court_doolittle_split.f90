@@ -81,4 +81,19 @@ subroutine dool_spli(A, n, L, U)
   end do
 end subroutine
 
+subroutine lu_spli(A, b, n, X)
+  use triangle_equation
+  implicit none
+  integer n, i, j
+  real A(n,n), b(n), X(n), y(n)
+  real L(n,n), U(n,n)
+
+  call dool_spli(A, n, L, U)
+  call down_tri_equ(L, b, n, y)
+  call up_tri_equ(U, y, n, X)
+  
+  !write(*,*) X 
+  
+end subroutine 
+
 end module
